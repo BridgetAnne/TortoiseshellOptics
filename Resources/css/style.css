@@ -10,6 +10,8 @@ html {
   display: flex; /* don't do this? */
   max-width: 960px;
   margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 h1 {
   font-size: 2rem;
@@ -20,7 +22,15 @@ h1 {
 /* Header */
 
 .logo {
-  padding-top: 1rem;
+  position: absolute;
+  z-index: 1;
+  left: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.logo .container {
+  margin-top: 1rem;
   background-color: cadetblue;
   color: white;
 }
@@ -29,29 +39,75 @@ h1 {
   padding-left: 2rem;
   padding-right: 1rem;
 }
-.logo container {
-  display: flex;
-  flex-grow: 1;
+.logo span {
+  /* display: flex;
+  flex-grow: 1; */ /* Not working */
 }
 nav {
   padding-right: 2rem;
 }
 nav span {
-  padding: 1rem 2rem;
+  padding: 1rem 0 1rem 2rem;
+}
+a {
+  color: white;
+  text-decoration: none;
 }
 .small-nav {
   display: none;
 }
 .banner {
   background-image: url("../Images/glasses-bg.png");
-  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 30rem;
-}
-.banner container {
-  position: relative;
-  margin-right: 0;
+  top: 0;
 }
 .headline {
   padding: 1.5rem 5rem;
   background-color: white;
+  position: relative;
+  top: 10rem;
+  left: 6rem;
+}
+
+/* Main Content */
+
+main .container {
+  display: flex;
+  flex-direction: column;
+}
+.reasons, .business-info {
+  display: flex;
+  margin-top: 3rem;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.reasons {
+  height: 8rem;
+}
+.reason {
+  margin: 0 3rem;
+  width: 5rem;
+}
+.reason span {
+  display: flex;
+  justify-content: center;
+}
+.reason-img.paper {
+  width: 3.5rem;
+}
+/*.reason-img.ruler, .reason-img.truck {
+  width: 5rem;
+}*/
+.business-info {
+
+}
+.title {
+  background-color: cadetblue;
+  width: 10rem;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+  color: white;
 }
