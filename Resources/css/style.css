@@ -20,6 +20,7 @@ h1 {
 }
 
 /* Header */
+
 header {
   background-image: url("../Images/glasses-bg.png");
   background-repeat: no-repeat;
@@ -28,6 +29,11 @@ header {
   height: 30rem;
   top: 0;
 }
+/*
+.box .container {
+  margin: 0 2rem;
+}
+*/
 .header {
   justify-content: center;
   width: 100%;
@@ -46,13 +52,8 @@ header {
   padding-left: 2rem;
   padding-right: 1rem;
 }
-.logo span {
-
-}
-nav {
-  display: inline-block;
-}
 nav span {
+  display: inline-block;
   padding: 1rem 2rem 1rem 0;
 }
 a {
@@ -62,15 +63,16 @@ a {
 .small-nav {
   display: none;
 }
-.banner {
-
-}
 .headline {
+  display: block;
+  width: 25rem;
+  position: relative;
   padding: 1.5rem 5rem;
   background-color: white;
   position: relative;
+  float: right;
   top: 10rem;
-  left: 6rem;
+  right: 10rem;
 }
 
 /* Main Content */
@@ -83,7 +85,6 @@ main .container {
   display: flex;
   margin-top: 3rem;
   flex-direction: row;
-  justify-content: space-between;
 }
 .reason {
   margin: 0 3rem;
