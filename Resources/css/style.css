@@ -27,12 +27,13 @@ h1 {
   left: 10rem;
   display: flex;
   justify-content: center;
-}
-
-.logo .container {
   margin-top: 1rem;
   background-color: cadetblue;
   color: white;
+}
+
+.logo .container {
+
 }
 .logo img {
   height: 1.5rem;
@@ -84,16 +85,32 @@ main .container {
   flex-direction: row;
   justify-content: space-between;
 }
-.reasons {
-  height: 8rem;
-}
 .reason {
   margin: 0 3rem;
   width: 5rem;
-}
-.reason span {
+  height: 8rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.reason-img {
+  max-width: 8rem;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+}
+.reason img {
+  max-width: 5rem;
+  max-height: 5rem;
+}
+.description {
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+}
+.reason img {
+
 }
 .reason-img.paper {
   width: 3.5rem;
