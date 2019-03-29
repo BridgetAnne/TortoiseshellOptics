@@ -44,11 +44,8 @@ h1 {
   /* display: flex;
   flex-grow: 1; */ /* Not working */
 }
-nav {
-  padding-right: 2rem;
-}
 nav span {
-  padding: 1rem 0 1rem 2rem;
+  padding: 1rem 2rem 1rem 0;
 }
 a {
   color: white;
@@ -103,23 +100,20 @@ main .container {
 .reason img {
   max-width: 5rem;
   max-height: 5rem;
+  min-width: 3.5rem;
 }
 .description {
   display: block;
   padding: 0.5rem;
   text-align: center;
 }
-.reason img {
-
-}
-.reason-img.paper {
-  width: 3.5rem;
-}
-/*.reason-img.ruler, .reason-img.truck {
-  width: 5rem;
-}*/
 .business-info {
-
+  justify-content: flex-start;
+  margin-bottom: 5rem;
+}
+.info {
+  width: 35%;
+  margin: 0 2.5%;
 }
 .title {
   background-color: cadetblue;
@@ -127,4 +121,18 @@ main .container {
   padding: 0.5rem 1.25rem;
   font-weight: bold;
   color: white;
+}
+.info p {
+  margin-top: 1rem;
+}
+footer .container {
+  background-color: azure;
+  padding: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+footer img {
+  height: 1.5rem;
+  padding-right: 1rem;
 }
