@@ -7,11 +7,8 @@ html {
 }
 
 .container {
-  display: flex; /* don't do this? */
   max-width: 960px;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
 }
 h1 {
   font-size: 2rem;
@@ -29,12 +26,8 @@ header {
   height: 30rem;
   padding-top: 1rem;
 }
-/*
-.box .container {
-  margin: 0 2rem;
-}
-*/
 .header {
+  display: flex;
   justify-content: center;
   width: 100%;
   background-color: cadetblue;
@@ -62,44 +55,39 @@ a {
 .small-nav {
   display: none;
 }
+.banner.container {
+  display: flex;
+  justify-content: flex-end;
+}
 .headline {
-  display: block;
-  position: relative;
-  padding: 1.5rem 5rem;
-  background-color: white;
+  display: inline-block;
   position: relative;
   float: right;
   top: 10rem;
-  right: 10rem;
+  right: 0;
+  margin-right: -2rem;
+  padding: 1.5rem 5rem;
+  background-color: white;
+  color: black;
 }
 
 /* Main Content */
 
-main .container {
+.supporting {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
-.reasons, .business-info {
-  display: flex;
-  margin-top: 3rem;
-  flex-direction: row;
-}
-.reason {
-  margin: 0 3rem;
+.service {
+  margin: 3rem;
   width: 5rem;
   height: 8rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
-.reason-img {
-  max-width: 8rem;
-  padding: 2rem 0;
-  display: flex;
-  align-items: center;
-}
-.reason img {
+.service img {
   max-width: 5rem;
   max-height: 5rem;
   min-width: 3.5rem;
@@ -107,12 +95,10 @@ main .container {
 .description {
   display: block;
   padding: 0.5rem;
-  text-align: center;
 }
-.business-info {
-  justify-content: flex-start;
+.supporting.container {
+  align-items: flex-start;
   margin-bottom: 5rem;
-  margin-left: 3rem;
 }
 .info {
   width: 35%;
@@ -120,24 +106,21 @@ main .container {
 }
 .title {
   background-color: cadetblue;
-  width: 10rem;
+  max-width: 10rem;
   padding: 0.5rem 1.25rem;
   font-weight: bold;
   color: white;
+  margin-bottom: 1rem;
 }
-.info p {
-  margin-top: 1rem;
-}
-footer .container {
+footer {
   background-color: azure;
   padding: 4rem;
-  width: 100%;
-  display: flex;
+  align-items: center;
   justify-content: flex-start;
 }
 footer img {
   height: 1.5rem;
-  padding-right: 1rem;
+  margin-right: 1rem;
 }
 
 /* Other screen sizes */
@@ -146,20 +129,20 @@ footer img {
   header {
     height: 22rem;
     background-position: 40%;
-  }
-  .header {
-    margin-top: 0;
-    top: 0;
+    padding-top: 0;
   }
   .headline {
     padding: 0.75rem 4rem;
     top: 9rem;
-    right: 2rem;
+    margin-right: 2rem;
+  }
+  h1 {
+    font-size: 1.33rem;
   }
   main {
     width: 100%;
   }
-  .business-info {
+  .info {
     margin-left: 3rem;
   }
 }
@@ -167,9 +150,6 @@ footer img {
   header {
     height: 17rem;
     background-position: 20%;
-  }
-  .header {
-
   }
   .big-nav {
     display: none;
@@ -184,40 +164,49 @@ footer img {
     padding: 1rem;
     width: 100%;
     top: 9rem;
-    right: 0;
+    margin-right: 0;
     text-align: center;
   }
   h1 {
     font-size: 1rem;
   }
-  .reasons {
+  .supporting {
     flex-direction: column;
+    align-items: center;
     margin-top: 3.77rem;
   }
-  .reason {
+  .service {
     margin-top: 1.54rem;
   }
-  .reason span {
+  .service span {
     font-size: 0.77rem;
   }
-  .business-info {
+  .supporting.container {
     margin-top: 3.77rem;
     margin-left: 0;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
+  .info {
+    width: auto;
+    margin-left: 0;
+  }
+  .info .title {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+  }
   .info p {
     font-size: 0.77rem;
+    padding: 1rem;
   }
   .info.appointments {
     margin-top: 4rem;
   }
   footer {
-    width: 100%;
-  }
-  footer .container {
-    justify-content: center;
+    text-align: center;
   }
   footer span {
     display: none;
