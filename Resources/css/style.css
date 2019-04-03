@@ -25,9 +25,9 @@ header {
   background-image: url("../Images/glasses-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 30%;
   height: 30rem;
-  top: 0;
+  padding-top: 1rem;
 }
 /*
 .box .container {
@@ -37,7 +37,6 @@ header {
 .header {
   justify-content: center;
   width: 100%;
-  margin-top: 1rem;
   background-color: cadetblue;
   color: white;
   flex-grow: 1;
@@ -65,7 +64,6 @@ a {
 }
 .headline {
   display: block;
-  width: 25rem;
   position: relative;
   padding: 1.5rem 5rem;
   background-color: white;
@@ -114,6 +112,7 @@ main .container {
 .business-info {
   justify-content: flex-start;
   margin-bottom: 5rem;
+  margin-left: 3rem;
 }
 .info {
   width: 35%;
@@ -139,4 +138,88 @@ footer .container {
 footer img {
   height: 1.5rem;
   padding-right: 1rem;
+}
+
+/* Other screen sizes */
+
+@media only screen and (max-width: 960px) {
+  header {
+    height: 22rem;
+    background-position: 40%;
+  }
+  .header {
+    margin-top: 0;
+    top: 0;
+  }
+  .headline {
+    padding: 0.75rem 4rem;
+    top: 9rem;
+    right: 2rem;
+  }
+  main {
+    width: 100%;
+  }
+  .business-info {
+    margin-left: 3rem;
+  }
+}
+@media only screen and (max-width: 616px) {
+  header {
+    height: 17rem;
+    background-position: 20%;
+  }
+  .header {
+
+  }
+  .big-nav {
+    display: none;
+  }
+  .small-nav {
+    display: block;
+  }
+  .logo span {
+    display: none;
+  }
+  .headline {
+    padding: 1rem;
+    width: 100%;
+    top: 9rem;
+    right: 0;
+    text-align: center;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  .reasons {
+    flex-direction: column;
+    margin-top: 3.77rem;
+  }
+  .reason {
+    margin-top: 1.54rem;
+  }
+  .reason span {
+    font-size: 0.77rem;
+  }
+  .business-info {
+    margin-top: 3.77rem;
+    margin-left: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .info p {
+    font-size: 0.77rem;
+  }
+  .info.appointments {
+    margin-top: 4rem;
+  }
+  footer {
+    width: 100%;
+  }
+  footer .container {
+    justify-content: center;
+  }
+  footer span {
+    display: none;
+  }
 }
